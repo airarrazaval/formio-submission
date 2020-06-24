@@ -1,0 +1,51 @@
+{
+  "name": "formio-submission",
+  "version": "1.0.0",
+  "description": "Form.io Submission Utilities",
+  "main": "lib/index.js",
+  "scripts": {
+    "test:coverage": "nyc --reporter=text mocha --reporter spec './{,!(node_modules)/**/}*.spec.js'",
+    "test": "mocha --require ts-node/register --reporter spec './{,!(node_modules)/**/}*.spec.ts'",
+    "watch": "tsc -w",
+    "build": "tsc",
+    "lint": "tslint -p . --fix",
+    "prepublish": "npm run build"
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "formio",
+    "formiojs"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.11",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^14.0.14",
+    "chai": "^4.2.0",
+    "mocha": "^8.0.1",
+    "pre-commit": "^1.2.2",
+    "ts-node": "^8.10.2",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.5"
+  },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airarrazaval/formio-submission.git"
+  },
+  "bugs": {
+    "url": "https://github.com/airarrazaval/formio-submission/issues"
+  },
+  "author": "Alfredo Irarrazaval",
+  "license": "MIT"
+}
